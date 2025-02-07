@@ -24,3 +24,4 @@ torrent_manager-*.tar
 .elixir-tools
 .elixir_ls
 test
+test.torrent

@@ -1,18 +1,14 @@
 defmodule TorrentManager do
-  @moduledoc """
-  Documentation for `TorrentManager`.
-  """
+  alias TorrentManager.Bencode
 
-  @doc """
-  Hello world.
+  def read_torrent_file(path) do
+    case File.read(path) do
+      {:ok, content} ->
+        {decoded, _} = Bencode.decode(content)
+        decoded
 
-  ## Examples
-
-      iex> TorrentManager.hello()
-      :world
-
-  """
-  def hello do
-    :world
+      {:error, reason} ->
+        {:error, reason}
+    end
   end
 end

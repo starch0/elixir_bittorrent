@@ -11,8 +11,8 @@ defmodule TorrentManager.Bencode do
     {string, remainder}
   end
 
-  defp decode_integer(<<"i", rest::binary>>) do
-    [num, rest] = String.split(rest, "e", parts: 2)
+  defp decode_integer(binary) do
+    [num, rest] = String.split(binary, "e", parts: 2)
     {String.to_integer(num), rest}
   end
 
