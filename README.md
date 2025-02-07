@@ -1,5 +1,5 @@
 # TorrentManager
-
+** TODO: consertar essa todo list **
 ** TODO: 1. Estrutura Básica do Torrent ✅
 [x] Criar struct básica
 [x] Ler arquivo .torrent
