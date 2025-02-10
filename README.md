@@ -8,17 +8,17 @@
 - [x] Ler arquivo .torrent
 - [x] Extrair informações básicas
 
-## 2. Melhorar a Struct Torrent 🏗️
-- [ ] Adicionar info_hash (necessário para o tracker)
-- [ ] Adicionar pieces (lista de hashes das peças)
-- [ ] Adicionar piece_length (tamanho de cada peça)
+## 2. Melhorar a Struct Torrent
+- [x] Adicionar info_hash (necessário para o tracker)
+- [x] Adicionar pieces (lista de hashes das peças)
+- [x] Adicionar piece_length (tamanho de cada peça)
 - [ ] Adicionar lista de arquivos para torrents multi-arquivo
 
 ## 3. Comunicação com Tracker
-- [ ] Criar módulo TrackerClient
-- [ ] Implementar conexão HTTP com tracker
-- [ ] Gerar peer_id único para identificação
-- [ ] Montar URL de announce com parâmetros:
+- [x] Criar módulo TrackerClient
+- [x] Implementar conexão HTTP com tracker
+- [x] Gerar peer_id único para identificação
+- [x] Montar URL de announce com parâmetros:
   - info_hash
   - peer_id
   - port

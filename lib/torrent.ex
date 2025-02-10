@@ -2,8 +2,23 @@ defmodule TorrentManager.Torrent do
   defstruct [
     :name,
     :size,
-    :tracker_url
+    :tracker_url,
+    :info_hash,
+    :piece_lenght,
+    :pieces,
   ]
+
+
+  def calculate_info_hash(info) do
+    info
+    |> Bencode.encode()
+    |> :crypto.hash(:sha)
+
+  end
+
+  defp split_pieces(pieces) do
+    for <<piece::binary-size(20) <- pieces>>, do: piece
+  end
 
   def new(decoded_content) do
     info = decoded_content.info
